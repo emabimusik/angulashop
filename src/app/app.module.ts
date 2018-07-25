@@ -10,7 +10,7 @@ import {CartComponent} from './cart.component';
 import { CartService } from './cartService';
 const routes: Routes = [
   
-  { path: "angulashop/shopApi", redirectTo:'', pathMatch: 'full' },
+  { path: "angulashop/shopApi", redirectTo:"", pathMatch: 'full' },
   { path: "", component: ProductListComponent },
   { path: "detail/:id", component: ProductDetailComponent  },
   { path: "cart", component: CartComponent  }
