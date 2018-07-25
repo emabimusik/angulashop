@@ -1,0 +1,40 @@
+
+
+<div class="container">
+        
+<div class="row">
+<div class="col-md-8">
+        <h2>Product</h2>
+<!-- Card -->
+<div class="card" *ngIf="product && product.name" id="card-detail">
+
+    <!-- Card image -->
+    <img class="card-img-top" src="{{product.image}}" alt="{{product.image_title}}">
+  
+    <!-- Card content -->
+    <div class="card-body">
+            
+      <!-- Title -->
+      <h4 class="card-title"><a>{{product.name}}</a></h4>
+      <h4  *ngFor="let price of prices">{{price}}Kr</h4>
+      <!-- Text -->
+      
+      <p class="card-text">{{product.description}}</p>
+      
+    </div>
+  
+    <a class="btn btn-primary" [routerLink]="['/buy-product']">Buy</a>
+    <button (click)="goBack()">Go Back</button>
+  
+  </div>
+</div>
+<div class="col-md-4" id="cart-detail">
+        <app-cart></app-cart>
+</div>
+</div>
+
+</div>
+
+  <!-- Card -->
+  
+  
